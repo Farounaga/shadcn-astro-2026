@@ -1,0 +1,86 @@
+---
+layout: ../../layouts/docs.astro
+title: Veille - Publications
+section: veille
+links:
+  - href: /veille
+    label: Publications
+  - href: /veille/sources
+    label: Sources & méthode
+---
+
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+# Veille technologique (format publications)
+
+Ici, la veille n'est pas un simple bloc de texte : chaque entrée est une **mini-news** datée.
+
+<div className="space-y-4 mt-6">
+  <Card>
+    <CardHeader>
+      <div className="flex items-center gap-2">
+        <Badge variant="secondary">Astro</Badge>
+        <span className="text-xs text-muted-foreground">17 mars 2026</span>
+      </div>
+      <CardTitle>MDX: structurer un portfolio comme une documentation</CardTitle>
+      <CardDescription>
+        Bon pattern pour séparer contenu et UI, avec navigation par sections.
+      </CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p>
+        Mise en place validée : pages MDX avec layouts partagés, composants shadcn/ui intégrés et menu global.
+      </p>
+    </CardContent>
+  </Card>
+
+<Card>
+  <CardHeader>
+    <div className="flex items-center gap-2">
+      <Badge>UI</Badge>
+      <span className="text-xs text-muted-foreground">15 mars 2026</span>
+    </div>
+    <CardTitle>shadcn/ui pour des pages éditoriales plus lisibles</CardTitle>
+    <CardDescription>
+      Les blocs `Card`, `Badge` et `Alert` améliorent la hiérarchie visuelle des
+      notes.
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>
+      En pratique, les publications deviennent plus scannables et proches d'un
+      format news.
+    </p>
+  </CardContent>
+</Card>
+
+  <Card>
+    <CardHeader>
+      <div className="flex items-center gap-2">
+        <Badge variant="outline">Performance</Badge>
+        <span className="text-xs text-muted-foreground">12 mars 2026</span>
+      </div>
+      <CardTitle>Hydratation partielle: garder un site rapide</CardTitle>
+      <CardDescription>
+        Éviter le JavaScript inutile et hydrater uniquement les composants interactifs.
+      </CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p>
+        Le rendu statique + îlots interactifs reste un excellent compromis pour un portfolio.
+      </p>
+    </CardContent>
+  </Card>
+</div>
+
+<Button asChild variant="outline" className="mt-6">
+  <a href="/veille/sources">Voir les sources et la méthode</a>
+</Button>
