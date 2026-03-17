@@ -1,0 +1,17 @@
+---
+import SiteLayout from "@/layouts/site.astro"
+import { Button } from "@/components/ui/button"
+---
+
+<SiteLayout title="Components">
+  <section class="mx-auto max-w-2xl space-y-4 text-center">
+    <h1 class="text-3xl font-semibold">Components</h1>
+    <p class="text-muted-foreground">
+      Страница со всеми примерами компонентов находится здесь:
+      <code>/presentation/components</code>.
+    </p>
+    <Button asChild>
+      <a href="/presentation/components">Открыть страницу компонентов</a>
+    </Button>
+  </section>
+</SiteLayout>
