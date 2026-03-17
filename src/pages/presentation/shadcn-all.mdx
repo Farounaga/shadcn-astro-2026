@@ -1,0 +1,104 @@
+---
+layout: ../../layouts/docs.astro
+title: Catalogue shadcn/ui
+section: presentation
+links:
+  - href: /presentation
+    label: Introduction
+  - href: /presentation/shadcn-elements
+    label: Exemples rapides
+  - href: /presentation/shadcn-all
+    label: Catalogue complet
+  - href: /presentation/components
+    label: Components (full list)
+---
+
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+
+# Catalogue complet des composants disponibles
+
+Cette page MDX regroupe tous les composants shadcn/ui actuellement présents dans ce projet, avec exemple d'usage.
+
+## 1) Button (variants)
+
+<div className="flex flex-wrap gap-2">
+  <Button>default</Button>
+  <Button variant="secondary">secondary</Button>
+  <Button variant="outline">outline</Button>
+  <Button variant="ghost">ghost</Button>
+  <Button variant="destructive">destructive</Button>
+  <Button variant="link">link</Button>
+</div>
+
+## 2) Button (sizes)
+
+<div className="flex flex-wrap items-center gap-2">
+  <Button size="xs">xs</Button>
+  <Button size="sm">sm</Button>
+  <Button size="default">default</Button>
+  <Button size="lg">lg</Button>
+  <Button size="icon" aria-label="icon button">
+    ★
+  </Button>
+</div>
+
+## 3) Badge
+
+<div className="flex flex-wrap gap-2">
+  <Badge>default</Badge>
+  <Badge variant="secondary">secondary</Badge>
+  <Badge variant="outline">outline</Badge>
+</div>
+
+## 4) Alert
+
+<Alert>
+  <AlertTitle>Déploiement prêt</AlertTitle>
+  <AlertDescription>
+    Ton contenu MDX peut intégrer du texte, des composants et des callouts dans
+    la même page.
+  </AlertDescription>
+</Alert>
+
+## 5) Input + Textarea
+
+<div className="grid max-w-xl gap-3">
+  <Input placeholder="Nom du projet" />
+  <Input type="email" placeholder="contact@email.com" />
+  <Textarea placeholder="Résumé du projet / publication..." />
+</div>
+
+## 6) Card
+
+<div className="grid gap-4 md:grid-cols-2">
+  <Card>
+    <CardHeader>
+      <CardTitle>Card: Projet A</CardTitle>
+      <CardDescription>Composant pour présenter un projet en bloc visuel.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <Button size="sm">Lire</Button>
+    </CardContent>
+  </Card>
+
+  <Card>
+    <CardHeader>
+      <CardTitle>Card: Projet B</CardTitle>
+      <CardDescription>Compatible avec contenu markdown ou React.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <Badge variant="secondary">Mise à jour</Badge>
+    </CardContent>
+  </Card>
+</div>

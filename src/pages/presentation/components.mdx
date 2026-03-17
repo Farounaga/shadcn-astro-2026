@@ -1,0 +1,486 @@
+---
+layout: ../../layouts/docs.astro
+title: Components
+section: presentation
+links:
+  - href: /presentation
+    label: Introduction
+  - href: /presentation/shadcn-elements
+    label: Exemples rapides
+  - href: /presentation/shadcn-all
+    label: Catalogue complet
+  - href: /presentation/components
+    label: Components (full list)
+---
+
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+
+# Components
+
+> Next
+>
+> Here you can find all the components available in the library.
+
+Эта страница собрана в стиле документации: для установленных компонентов — живые примеры, для остальных — шаблон использования в MDX/TSX, чтобы ты мог быстро масштабировать проект.
+
+## Live examples (already wired in this project)
+
+### Alert
+
+<Alert>
+  <AlertTitle>Update available</AlertTitle>
+  <AlertDescription>
+    Новые компоненты можно подключать постепенно без ломки структуры MDX.
+  </AlertDescription>
+</Alert>
+
+### Badge
+
+<div className="flex gap-2">
+  <Badge>Default</Badge>
+  <Badge variant="secondary">Secondary</Badge>
+  <Badge variant="outline">Outline</Badge>
+</div>
+
+### Button
+
+<div className="flex flex-wrap gap-2">
+  <Button>Default</Button>
+  <Button variant="secondary">Secondary</Button>
+  <Button variant="outline">Outline</Button>
+  <Button variant="ghost">Ghost</Button>
+  <Button variant="destructive">Destructive</Button>
+  <Button variant="link">Link</Button>
+</div>
+
+### Card
+
+<Card className="mt-2 max-w-xl">
+  <CardHeader>
+    <CardTitle>Portfolio Block</CardTitle>
+    <CardDescription>Карточка проекта, публикации или кейса.</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <Button size="sm">Open</Button>
+  </CardContent>
+</Card>
+
+### Input
+
+<Input placeholder="Project name" className="max-w-xl" />
+
+### Textarea
+
+<Textarea placeholder="Project description" className="mt-2 max-w-xl" />
+
+---
+
+## Full component index (docs-style examples)
+
+Ниже — все компоненты из твоего списка. Для каждого дан минимальный пример использования.
+
+### Accordion
+
+```tsx
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Section</AccordionTrigger>
+    <AccordionContent>Content</AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+### Alert Dialog
+
+```tsx
+<AlertDialog>
+  <AlertDialogTrigger>Delete</AlertDialogTrigger>
+  <AlertDialogContent>...</AlertDialogContent>
+</AlertDialog>
+```
+
+### Aspect Ratio
+
+```tsx
+<AspectRatio ratio={16 / 9}>...</AspectRatio>
+```
+
+### Avatar
+
+```tsx
+<Avatar>
+  <AvatarImage src="/avatar.png" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>
+```
+
+### Breadcrumb
+
+```tsx
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
+### Button Group
+
+```tsx
+<ButtonGroup>
+  <Button>Left</Button>
+  <Button>Right</Button>
+</ButtonGroup>
+```
+
+### Calendar
+
+```tsx
+<Calendar mode="single" selected={date} onSelect={setDate} />
+```
+
+### Carousel
+
+```tsx
+<Carousel>
+  <CarouselContent>...</CarouselContent>
+</Carousel>
+```
+
+### Chart
+
+```tsx
+<ChartContainer config={config}>...</ChartContainer>
+```
+
+### Checkbox
+
+```tsx
+<Checkbox id="terms" />
+```
+
+### Collapsible
+
+```tsx
+<Collapsible>
+  <CollapsibleTrigger>Open</CollapsibleTrigger>
+  <CollapsibleContent>...</CollapsibleContent>
+</Collapsible>
+```
+
+### Combobox
+
+```tsx
+<Combobox items={items} value={value} onChange={setValue} />
+```
+
+### Command
+
+```tsx
+<Command>
+  <CommandInput placeholder="Type a command" />
+</Command>
+```
+
+### Context Menu
+
+```tsx
+<ContextMenu>
+  <ContextMenuTrigger>Right click</ContextMenuTrigger>
+</ContextMenu>
+```
+
+### Data Table
+
+```tsx
+<DataTable columns={columns} data={data} />
+```
+
+### Date Picker
+
+```tsx
+<DatePicker />
+```
+
+### Dialog
+
+```tsx
+<Dialog>
+  <DialogTrigger>Open</DialogTrigger>
+</Dialog>
+```
+
+### Direction
+
+```tsx
+<DirectionProvider dir="rtl">...</DirectionProvider>
+```
+
+### Drawer
+
+```tsx
+<Drawer>
+  <DrawerTrigger>Open</DrawerTrigger>
+</Drawer>
+```
+
+### Dropdown Menu
+
+```tsx
+<DropdownMenu>
+  <DropdownMenuTrigger>Menu</DropdownMenuTrigger>
+</DropdownMenu>
+```
+
+### Empty
+
+```tsx
+<Empty title="No results" description="Try another filter" />
+```
+
+### Field
+
+```tsx
+<Field>
+  <Label>Email</Label>
+  <Input type="email" />
+</Field>
+```
+
+### Hover Card
+
+```tsx
+<HoverCard>
+  <HoverCardTrigger>@user</HoverCardTrigger>
+</HoverCard>
+```
+
+### Input Group
+
+```tsx
+<InputGroup>
+  <InputGroupAddon>@</InputGroupAddon>
+  <Input />
+</InputGroup>
+```
+
+### Input OTP
+
+```tsx
+<InputOTP maxLength={6} />
+```
+
+### Item
+
+```tsx
+<Item>Element content</Item>
+```
+
+### Kbd
+
+```tsx
+<Kbd>⌘K</Kbd>
+```
+
+### Label
+
+```tsx
+<Label htmlFor="email">Email</Label>
+```
+
+### Menubar
+
+```tsx
+<Menubar>
+  <MenubarMenu>...</MenubarMenu>
+</Menubar>
+```
+
+### Native Select
+
+```tsx
+<NativeSelect>
+  <option>Option 1</option>
+</NativeSelect>
+```
+
+### Navigation Menu
+
+```tsx
+<NavigationMenu>
+  <NavigationMenuList>...</NavigationMenuList>
+</NavigationMenu>
+```
+
+### Pagination
+
+```tsx
+<Pagination>
+  <PaginationContent>...</PaginationContent>
+</Pagination>
+```
+
+### Popover
+
+```tsx
+<Popover>
+  <PopoverTrigger>Open</PopoverTrigger>
+</Popover>
+```
+
+### Progress
+
+```tsx
+<Progress value={66} />
+```
+
+### Radio Group
+
+```tsx
+<RadioGroup defaultValue="a">
+  <RadioGroupItem value="a" />
+</RadioGroup>
+```
+
+### Resizable
+
+```tsx
+<ResizablePanelGroup direction="horizontal">...</ResizablePanelGroup>
+```
+
+### Scroll Area
+
+```tsx
+<ScrollArea className="h-40">...</ScrollArea>
+```
+
+### Select
+
+```tsx
+<Select>
+  <SelectTrigger />
+  <SelectContent />
+</Select>
+```
+
+### Separator
+
+```tsx
+<Separator />
+```
+
+### Sheet
+
+```tsx
+<Sheet>
+  <SheetTrigger>Open</SheetTrigger>
+</Sheet>
+```
+
+### Sidebar
+
+```tsx
+<SidebarProvider>
+  <Sidebar />
+</SidebarProvider>
+```
+
+### Skeleton
+
+```tsx
+<Skeleton className="h-4 w-40" />
+```
+
+### Slider
+
+```tsx
+<Slider defaultValue={[50]} max={100} step={1} />
+```
+
+### Sonner
+
+```tsx
+<Toaster />
+<Button onClick={() => toast("Saved")}>Notify</Button>
+```
+
+### Spinner
+
+```tsx
+<Spinner />
+```
+
+### Switch
+
+```tsx
+<Switch />
+```
+
+### Table
+
+```tsx
+<Table>
+  <TableHeader>...</TableHeader>
+</Table>
+```
+
+### Tabs
+
+```tsx
+<Tabs defaultValue="overview">
+  <TabsList>...</TabsList>
+</Tabs>
+```
+
+### Toast
+
+```tsx
+<ToastProvider>
+  <Toast />
+</ToastProvider>
+```
+
+### Toggle
+
+```tsx
+<Toggle>Bold</Toggle>
+```
+
+### Toggle Group
+
+```tsx
+<ToggleGroup type="single">
+  <ToggleGroupItem value="left">Left</ToggleGroupItem>
+</ToggleGroup>
+```
+
+### Tooltip
+
+```tsx
+<TooltipProvider>
+  <Tooltip>
+    <TooltipTrigger>Hover me</TooltipTrigger>
+    <TooltipContent>Info</TooltipContent>
+  </Tooltip>
+</TooltipProvider>
+```
+
+### Typography
+
+```tsx
+<TypographyH2>Section title</TypographyH2>
+<TypographyP>Paragraph</TypographyP>
+```

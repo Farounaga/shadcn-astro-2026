@@ -1,0 +1,60 @@
+---
+layout: ../../layouts/docs.astro
+title: Presentation
+section: presentation
+links:
+  - href: /presentation
+    label: Introduction
+  - href: /presentation/shadcn-elements
+    label: Exemples rapides
+  - href: /presentation/shadcn-all
+    label: Catalogue complet
+  - href: /presentation/components
+    label: Components (full list)
+---
+
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+# Présentation
+
+Bienvenue dans la section **Presentation**. Le contenu est piloté en **MDX** pour mélanger texte, composants et blocs visuels.
+
+<Badge>Disponible</Badge>
+
+## Pitch
+
+Je construis des interfaces modernes avec Astro, en séparant le contenu éditorial dans des pages MDX pour garder un portfolio maintenable et agréable à lire.
+
+## Aperçu rapide
+
+<div className="grid gap-4 md:grid-cols-2">
+  <Card>
+    <CardHeader>
+      <CardTitle>Compétences UI</CardTitle>
+      <CardDescription>Design system, composants réutilisables, cohérence visuelle.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <Button variant="outline">React + Astro</Button>
+    </CardContent>
+  </Card>
+
+  <Card>
+    <CardHeader>
+      <CardTitle>Méthode</CardTitle>
+      <CardDescription>Documentation continue et pages de démonstration.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <Button asChild>
+        <a href="/presentation/shadcn-all">Voir le catalogue complet</a>
+      </Button>
+    </CardContent>
+  </Card>
+</div>
