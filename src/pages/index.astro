@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import SiteLayout from "@/layouts/site.astro"
+import { Kbd } from "@/components/ui/kbd"
 
 const highlights = [
   {
@@ -35,26 +36,21 @@ const highlights = [
       class="rounded-2xl border bg-gradient-to-b from-muted/70 to-background p-8"
     >
       <div class="space-y-4">
-        <Badge variant="secondary">Portfolio 2026</Badge>
+        <Badge variant="outline">Portfolio 2026</Badge>
         <h1 class="max-w-3xl text-4xl leading-tight font-semibold md:text-5xl">
-          Un portfolio moderne avec contenu principal en MDX
+          Vladimir Spirine
         </h1>
         <p
           class="max-w-2xl text-sm leading-7 text-muted-foreground md:text-base"
         >
-          Tu as maintenant une structure orientée documentation : une page
-          d'accueil claire, des pages <code>presentation</code> pour la vitrine, et
-          une section
-          <code>veille</code> transformée en flux de publications.
+          Alternant BTS SIO option SLAM, <br>
+          passionné par les nouvelles technologies et l'automatisation.
         </p>
         <div class="flex flex-wrap gap-3 pt-2">
-          <Button asChild>
-            <a href="/presentation">Voir Presentation</a>
+          <Button variant="link">
+            <a href="/presentation">Voir Ma Presentation</a>
           </Button>
-          <Button asChild variant="outline">
-            <a href="/presentation/components">Components full list</a>
-          </Button>
-          <Button asChild variant="secondary">
+          <Button variant="link">
             <a href="/veille">Voir les publications</a>
           </Button>
         </div>
