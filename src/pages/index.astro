@@ -1,17 +1,107 @@
 ---
-import Layout from "@/layouts/main.astro"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import SiteLayout from "@/layouts/site.astro"
+
+const highlights = [
+  {
+    title: "Portfolio en MDX",
+    description:
+      "Chaque section est écrite comme une documentation pour pouvoir évoluer facilement.",
+  },
+  {
+    title: "Composants shadcn/ui",
+    description:
+      "Des exemples prêts à copier-coller pour accélérer la création de pages.",
+  },
+  {
+    title: "Veille en publications",
+    description:
+      "Le suivi technologique est présenté comme des mini-news datées.",
+  },
+]
 ---
 
-<Layout>
-  <div class="flex min-h-svh p-6">
-    <div class="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-      <div>
-        <h1 class="font-medium">Project ready!</h1>
-        <p>You may now add components and start building.</p>
-        <p>We've already added the button component for you.</p>
-        <Button client:load className="mt-2">Button</Button>
+<SiteLayout title="Portfolio">
+  <section class="space-y-10">
+    <div
+      class="rounded-2xl border bg-gradient-to-b from-muted/70 to-background p-8"
+    >
+      <div class="space-y-4">
+        <Badge variant="secondary">Portfolio 2026</Badge>
+        <h1 class="max-w-3xl text-4xl leading-tight font-semibold md:text-5xl">
+          Un portfolio moderne avec contenu principal en MDX
+        </h1>
+        <p
+          class="max-w-2xl text-sm leading-7 text-muted-foreground md:text-base"
+        >
+          Tu as maintenant une structure orientée documentation : une page
+          d'accueil claire, des pages <code>presentation</code> pour la vitrine, et
+          une section
+          <code>veille</code> transformée en flux de publications.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <Button asChild>
+            <a href="/presentation">Voir Presentation</a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="/presentation/components">Components full list</a>
+          </Button>
+          <Button asChild variant="secondary">
+            <a href="/veille">Voir les publications</a>
+          </Button>
+        </div>
       </div>
     </div>
-  </div>
-</Layout>
+
+    <div class="grid gap-4 md:grid-cols-3">
+      {
+        highlights.map((item) => (
+          <Card>
+            <CardHeader>
+              <CardTitle>{item.title}</CardTitle>
+              <CardDescription>{item.description}</CardDescription>
+            </CardHeader>
+          </Card>
+        ))
+      }
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2">
+      <Card>
+        <CardHeader>
+          <CardTitle>Presentation</CardTitle>
+          <CardDescription>
+            Pages de profil, démonstrations, composants et contenu long format.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button asChild>
+            <a href="/presentation">Entrer dans la section</a>
+          </Button>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Veille</CardTitle>
+          <CardDescription>
+            Publications courtes au format news, avec date, thème et résumé.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button asChild variant="outline">
+            <a href="/veille">Voir les news</a>
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
+  </section>
+</SiteLayout>

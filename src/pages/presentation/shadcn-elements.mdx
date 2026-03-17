@@ -1,0 +1,64 @@
+---
+layout: ../../layouts/docs.astro
+title: Exemples shadcn/ui
+section: presentation
+links:
+  - href: /presentation
+    label: Introduction
+  - href: /presentation/shadcn-elements
+    label: Exemples rapides
+  - href: /presentation/shadcn-all
+    label: Catalogue complet
+  - href: /presentation/components
+    label: Components (full list)
+---
+
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+# Exemples rapides de composants
+
+Cette page sert de galerie compacte. Le catalogue détaillé est disponible dans **Catalogue complet**.
+
+## Buttons
+
+<div className="flex flex-wrap gap-2">
+  <Button>Default</Button>
+  <Button variant="secondary">Secondary</Button>
+  <Button variant="outline">Outline</Button>
+  <Button variant="ghost">Ghost</Button>
+  <Button variant="destructive">Destructive</Button>
+</div>
+
+## Badges
+
+<div className="flex flex-wrap gap-2">
+  <Badge>Production</Badge>
+  <Badge variant="secondary">En cours</Badge>
+  <Badge variant="outline">Prototype</Badge>
+</div>
+
+## Card exemple
+
+<Card className="mt-3 max-w-xl">
+  <CardHeader>
+    <CardTitle>Projet portfolio MDX</CardTitle>
+    <CardDescription>
+      Architecture orientée contenu pour gérer facilement les sections.
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <ul>
+      <li>Contenu éditable en MDX</li>
+      <li>Navigation claire</li>
+      <li>Composants shadcn/ui prêts à l'emploi</li>
+    </ul>
+  </CardContent>
+</Card>

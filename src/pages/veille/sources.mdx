@@ -1,0 +1,55 @@
+---
+layout: ../../layouts/docs.astro
+title: Sources de veille
+section: veille
+links:
+  - href: /veille
+    label: Publications
+  - href: /veille/sources
+    label: Sources & méthode
+---
+
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+# Sources & méthode éditoriale
+
+## Sources principales
+
+- Blogs officiels Astro et React.
+- Changelogs des librairies UI.
+- Newsletters frontend / UX.
+
+## Comment je publie mes news
+
+<div className="grid gap-4 md:grid-cols-2">
+  <Card>
+    <CardHeader>
+      <CardTitle>Étape 1</CardTitle>
+      <CardDescription>Collecte</CardDescription>
+    </CardHeader>
+    <CardContent>Je collecte les nouveautés marquantes de la semaine.</CardContent>
+  </Card>
+
+  <Card>
+    <CardHeader>
+      <CardTitle>Étape 2</CardTitle>
+      <CardDescription>Synthèse</CardDescription>
+    </CardHeader>
+    <CardContent>Je transforme l'information en publication courte et actionnable.</CardContent>
+  </Card>
+</div>
+
+<Alert className="mt-5">
+  <AlertTitle>Conseil</AlertTitle>
+  <AlertDescription>
+    Garde un format homogène pour chaque news: date, thème, titre, résumé et
+    impact.
+  </AlertDescription>
+</Alert>
