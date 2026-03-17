@@ -1,0 +1,670 @@
+---
+layout: ../../layouts/docs.astro
+title: Components
+section: presentation
+links:
+  - href: /presentation
+    label: Introduction
+  - href: /presentation/shadcn-elements
+    label: Exemples rapides
+  - href: /presentation/shadcn-all
+    label: Catalogue complet
+  - href: /presentation/components
+    label: Components (full list)
+---
+
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+
+# Full Components Showcase — Portfolio Edition
+
+Ниже не «голые» демки, а примеры как будто это реальный сайт-портфолио: проекты, публикации, профиль, контакты.
+
+## Accordion
+
+<details className="rounded border p-3">
+  <summary className="cursor-pointer font-medium">
+    FAQ: Как я работаю над проектами?
+  </summary>
+  <p className="mt-2 text-sm text-muted-foreground">
+    Я начинаю с UX-сценариев, затем делаю UI-киты, потом собираю
+    production-версию на Astro + shadcn/ui.
+  </p>
+</details>
+
+## Alert
+
+<Alert>
+  <AlertTitle>Обновление портфолио</AlertTitle>
+  <AlertDescription>
+    Добавлен новый кейс: «Dashboard для аналитики контента».
+  </AlertDescription>
+</Alert>
+
+## Alert Dialog
+
+<div className="rounded border p-3">
+  <p className="mb-2 text-sm">Удалить проект из витрины?</p>
+  <div className="flex gap-2">
+    <Button size="sm" variant="outline">
+      Отмена
+    </Button>
+    <Button size="sm">Удалить</Button>
+  </div>
+</div>
+
+## Aspect Ratio
+
+<div
+  className="w-full max-w-[280px] overflow-hidden rounded"
+  style={{ aspectRatio: "16 / 9" }}
+>
+  <img
+    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+    alt="project preview"
+    className="h-full w-full object-cover"
+  />
+</div>
+
+## Avatar
+
+<div className="flex items-center gap-3">
+  <img
+    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80"
+    alt="avatar"
+    className="h-10 w-10 rounded-full object-cover"
+  />
+  <div>
+    <p className="text-sm font-medium">Camille Dupont</p>
+    <p className="text-xs text-muted-foreground">Frontend & UI Engineer</p>
+  </div>
+</div>
+
+## Badge
+
+<div className="flex gap-2">
+  <Badge>Live</Badge>
+  <Badge variant="secondary">In progress</Badge>
+  <Badge variant="outline">Case study</Badge>
+</div>
+
+## Breadcrumb
+
+<nav className="text-sm">
+  <ol className="flex items-center gap-2">
+    <li>
+      <a href="#" className="text-muted-foreground hover:underline">
+        Portfolio
+      </a>
+    </li>
+    <li>/</li>
+    <li>
+      <a href="#" className="text-muted-foreground hover:underline">
+        Projects
+      </a>
+    </li>
+    <li>/</li>
+    <li className="font-medium">Analytics Dashboard</li>
+  </ol>
+</nav>
+
+## Button
+
+<div className="flex flex-wrap gap-2">
+  <Button>Voir le projet</Button>
+  <Button variant="outline">Code source</Button>
+  <Button variant="secondary">Contact</Button>
+</div>
+
+## Button Group
+
+<div className="inline-flex gap-1 rounded-md border p-1">
+  <Button size="sm" variant="ghost">
+    Desktop
+  </Button>
+  <Button size="sm" variant="ghost">
+    Tablet
+  </Button>
+  <Button size="sm" variant="ghost">
+    Mobile
+  </Button>
+</div>
+
+## Calendar
+
+<div className="space-y-2">
+  <p className="text-sm text-muted-foreground">
+    Date de la prochaine présentation client :
+  </p>
+  <input type="date" className="h-9 rounded-md border px-2 text-sm" />
+</div>
+
+## Card
+
+<Card className="max-w-md overflow-hidden">
+  <img
+    src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=900&q=80"
+    alt="project cover"
+    className="h-36 w-full object-cover"
+  />
+  <CardHeader>
+    <CardTitle>E-commerce Redesign</CardTitle>
+    <CardDescription>
+      Refonte UI complète avec optimisation conversion +24%.
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <Button size="sm">Lire le case study</Button>
+  </CardContent>
+</Card>
+
+## Carousel
+
+<div className="space-y-2 rounded border p-3">
+  <div className="flex gap-2">
+    <Button size="xs" variant="outline">
+      Prev
+    </Button>
+    <Button size="xs" variant="outline">
+      Next
+    </Button>
+  </div>
+  <div className="grid grid-cols-3 gap-2 text-xs">
+    <img
+      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80"
+      className="h-20 w-full rounded object-cover"
+      alt="slide 1"
+    />
+    <img
+      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+      className="h-20 w-full rounded object-cover"
+      alt="slide 2"
+    />
+    <img
+      src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=400&q=80"
+      className="h-20 w-full rounded object-cover"
+      alt="slide 3"
+    />
+  </div>
+</div>
+
+## Chart
+
+<div className="space-y-2">
+  <p className="text-sm text-muted-foreground">Trafic portfolio (7 jours)</p>
+  <div className="flex h-12 items-end gap-1">
+    <div className="w-5 rounded-t bg-primary/70" style={{ height: "20%" }} />
+    <div className="w-5 rounded-t bg-primary/70" style={{ height: "35%" }} />
+    <div className="w-5 rounded-t bg-primary/70" style={{ height: "50%" }} />
+    <div className="w-5 rounded-t bg-primary/70" style={{ height: "65%" }} />
+    <div className="w-5 rounded-t bg-primary/70" style={{ height: "72%" }} />
+  </div>
+</div>
+
+## Checkbox
+
+<label className="flex items-center gap-2 text-sm">
+  <input type="checkbox" defaultChecked /> Afficher les projets archivés
+</label>
+
+## Collapsible
+
+<details className="rounded border p-3">
+  <summary className="cursor-pointer">Voir les technologies utilisées</summary>
+  <p className="mt-2 text-sm">
+    Astro, React islands, Tailwind v4, shadcn/ui, TypeScript.
+  </p>
+</details>
+
+## Combobox
+
+<select className="h-9 rounded-md border px-2 text-sm">
+  <option>Filtrer: UI Design</option>
+  <option>Filtrer: Frontend</option>
+  <option>Filtrer: Performance</option>
+</select>
+
+## Command
+
+<div className="rounded border p-3">
+  <Input placeholder="Rechercher une page: /projects, /veille, /contact..." />
+  <div className="mt-2 space-y-1 text-sm">
+    <div className="rounded bg-muted px-2 py-1">Go to /presentation</div>
+    <div className="rounded bg-muted px-2 py-1">Go to /veille</div>
+  </div>
+</div>
+
+## Context Menu
+
+<div className="rounded border border-dashed p-3 text-sm">
+  Clic droit sur une carte projet (actions: ouvrir, dupliquer, archiver).
+</div>
+
+## Data Table
+
+<table className="w-full text-sm">
+  <thead>
+    <tr>
+      <th className="border p-1 text-left">Projet</th>
+      <th className="border p-1 text-left">Statut</th>
+      <th className="border p-1 text-left">Stack</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className="border p-1">Portfolio</td>
+      <td className="border p-1">Live</td>
+      <td className="border p-1">Astro</td>
+    </tr>
+    <tr>
+      <td className="border p-1">CRM UI</td>
+      <td className="border p-1">Beta</td>
+      <td className="border p-1">React</td>
+    </tr>
+  </tbody>
+</table>
+
+## Date Picker
+
+<input type="date" className="h-9 rounded-md border px-2 text-sm" />
+
+## Dialog
+
+<div className="rounded border p-3">
+  <p className="text-sm">Partager le projet sur LinkedIn ?</p>
+  <div className="mt-2 flex gap-2">
+    <Button size="sm">Partager</Button>
+    <Button size="sm" variant="outline">
+      Annuler
+    </Button>
+  </div>
+</div>
+
+## Direction
+
+<div dir="rtl" className="rounded border border-dashed p-3 text-right">
+  واجهة العرض تدعم أيضًا النص من اليمين إلى اليسار.
+</div>
+
+## Drawer
+
+<div className="rounded border p-3">
+  <p className="text-sm font-medium">Drawer: Détails du projet</p>
+  <p className="mt-1 text-sm text-muted-foreground">
+    Objectifs, wireframes, résultats, métriques.
+  </p>
+</div>
+
+## Dropdown Menu
+
+<details className="rounded border p-3">
+  <summary className="cursor-pointer">Actions du projet</summary>
+  <div className="mt-2 space-y-1 text-sm">
+    <div className="rounded bg-muted px-2 py-1">Voir</div>
+    <div className="rounded bg-muted px-2 py-1">Éditer</div>
+    <div className="rounded bg-muted px-2 py-1">Supprimer</div>
+  </div>
+</details>
+
+## Empty
+
+<div className="rounded border border-dashed p-3 text-center">
+  <p className="font-medium">Aucune publication trouvée</p>
+  <p className="text-sm text-muted-foreground">
+    Essaie un autre filtre ou ajoute un nouvel article.
+  </p>
+</div>
+
+## Field
+
+<div className="space-y-1">
+  <label className="text-sm font-medium">Email professionnel</label>
+  <Input placeholder="hello@portfolio.dev" />
+</div>
+
+## Hover Card
+
+<div className="rounded border p-3">
+  <span className="underline decoration-dotted">@camille</span>
+  <div className="mt-2 rounded bg-muted p-2 text-sm">
+    Disponible pour mission freelance (Q2 2026).
+  </div>
+</div>
+
+## Input
+
+<Input placeholder="Recherche globale dans le portfolio" />
+
+## Input Group
+
+<div className="flex h-9 items-center overflow-hidden rounded-md border">
+  <span className="px-2 text-sm text-muted-foreground">https://</span>
+  <input
+    className="h-full w-full px-2 text-sm outline-none"
+    placeholder="mon-portfolio.dev"
+  />
+</div>
+
+## Input OTP
+
+<div className="space-y-2">
+  <p className="text-sm text-muted-foreground">Code de validation admin</p>
+  <div className="flex gap-1">
+    {Array.from({ length: 6 }).map((_, i) => (
+      <input
+        key={i}
+        maxLength={1}
+        className="h-8 w-8 rounded border text-center"
+      />
+    ))}
+  </div>
+</div>
+
+## Item
+
+<div className="rounded bg-muted px-2 py-1 text-sm">
+  Publication #18 — « State of Astro 2026 »
+</div>
+
+## Kbd
+
+<div className="flex items-center gap-2 text-sm">
+  Open search{" "}
+  <kbd className="rounded border bg-muted px-1.5 py-0.5 text-xs">⌘K</kbd>
+</div>
+
+## Label
+
+<label className="text-sm font-medium">Nom du projet</label>
+
+## Menubar
+
+<div className="inline-flex gap-2 rounded border p-1">
+  <Button size="xs" variant="ghost">
+    Fichier
+  </Button>
+  <Button size="xs" variant="ghost">
+    Édition
+  </Button>
+  <Button size="xs" variant="ghost">
+    Affichage
+  </Button>
+</div>
+
+## Native Select
+
+<select className="h-9 rounded-md border px-2 text-sm">
+  <option>Français</option>
+  <option>English</option>
+</select>
+
+## Navigation Menu
+
+<nav className="rounded border p-2">
+  <ul className="flex gap-2">
+    <li>
+      <Button size="xs" variant="outline">
+        Presentation
+      </Button>
+    </li>
+    <li>
+      <Button size="xs" variant="outline">
+        Components
+      </Button>
+    </li>
+    <li>
+      <Button size="xs" variant="outline">
+        Veille
+      </Button>
+    </li>
+  </ul>
+</nav>
+
+## Pagination
+
+<nav>
+  <ul className="flex gap-1">
+    <li>
+      <Button size="xs" variant="outline">
+        Prev
+      </Button>
+    </li>
+    <li>
+      <Button size="xs" variant="outline">
+        1
+      </Button>
+    </li>
+    <li>
+      <Button size="xs" variant="outline">
+        2
+      </Button>
+    </li>
+    <li>
+      <Button size="xs" variant="outline">
+        3
+      </Button>
+    </li>
+    <li>
+      <Button size="xs" variant="outline">
+        Next
+      </Button>
+    </li>
+  </ul>
+</nav>
+
+## Popover
+
+<details className="rounded border p-3">
+  <summary className="cursor-pointer">Voir les tags du projet</summary>
+  <div className="mt-2 flex gap-2">
+    <Badge variant="outline">UI</Badge>
+    <Badge variant="outline">Accessibility</Badge>
+    <Badge variant="outline">Performance</Badge>
+  </div>
+</details>
+
+## Progress
+
+<div className="space-y-1">
+  <p className="text-sm text-muted-foreground">Avancement de la refonte</p>
+  <progress value={70} max={100} className="w-full" />
+</div>
+
+## Radio Group
+
+<div className="flex gap-3 text-sm">
+  <label>
+    <input type="radio" name="theme" defaultChecked /> Clair
+  </label>
+  <label>
+    <input type="radio" name="theme" /> Sombre
+  </label>
+</div>
+
+## Resizable
+
+<div className="flex gap-2">
+  <div className="flex-1 rounded border p-2 text-xs">Preview Desktop</div>
+  <div className="w-1 rounded bg-border" />
+  <div className="flex-1 rounded border p-2 text-xs">Preview Mobile</div>
+</div>
+
+## Scroll Area
+
+<div className="h-24 overflow-y-auto rounded border p-2 text-sm">
+  {Array.from({ length: 8 }).map((_, i) => (
+    <p key={i}>News #{i + 1} — Mise à jour hebdomadaire de veille.</p>
+  ))}
+</div>
+
+## Select
+
+<div className="space-y-1">
+  <button className="h-9 rounded-md border px-2 text-sm">
+    Choisir une catégorie
+  </button>
+  <div className="rounded border bg-background p-1 text-sm">
+    <div className="rounded px-2 py-1 hover:bg-muted">Design System</div>
+    <div className="rounded px-2 py-1 hover:bg-muted">Frontend</div>
+  </div>
+</div>
+
+## Separator
+
+<hr className="border-border" />
+
+## Sheet
+
+<div className="rounded border p-3">
+  <p className="font-medium">Sheet: contact rapide</p>
+  <p className="text-sm text-muted-foreground">
+    Formulaire court pour prise de brief.
+  </p>
+</div>
+
+## Sidebar
+
+<div className="rounded border p-3">
+  <aside className="rounded bg-muted p-2 text-sm">
+    Sections: Intro / Projects / Veille / Contact
+  </aside>
+</div>
+
+## Skeleton
+
+<div className="space-y-2">
+  <div className="h-4 w-40 animate-pulse rounded bg-muted" />
+  <div className="h-4 w-60 animate-pulse rounded bg-muted" />
+</div>
+
+## Slider
+
+<div className="space-y-1">
+  <p className="text-sm text-muted-foreground">Niveau de priorité</p>
+  <input type="range" defaultValue={42} className="w-full" />
+</div>
+
+## Sonner
+
+<div className="rounded border bg-muted px-2 py-1 text-xs">
+  Toast host: « Projet sauvegardé »
+</div>
+
+## Spinner
+
+<div className="flex items-center gap-2 text-sm">
+  <div className="h-4 w-4 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />{" "}
+  Upload des assets...
+</div>
+
+## Switch
+
+<label className="flex items-center gap-2 text-sm">
+  <input type="checkbox" role="switch" defaultChecked /> Activer le mode
+  présentation
+</label>
+
+## Table
+
+<table className="w-full text-sm">
+  <thead>
+    <tr>
+      <th className="border p-1 text-left">Client</th>
+      <th className="border p-1 text-left">Projet</th>
+      <th className="border p-1 text-left">Résultat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className="border p-1">Nova</td>
+      <td className="border p-1">Landing page</td>
+      <td className="border p-1">+31% leads</td>
+    </tr>
+  </tbody>
+</table>
+
+## Tabs
+
+<div>
+  <div className="mb-2 flex gap-1">
+    <Button size="xs" variant="outline">
+      Overview
+    </Button>
+    <Button size="xs" variant="outline">
+      Process
+    </Button>
+    <Button size="xs" variant="outline">
+      Results
+    </Button>
+  </div>
+  <div className="rounded border p-2 text-sm">
+    Contenu de l’onglet sélectionné.
+  </div>
+</div>
+
+## Textarea
+
+<Textarea placeholder="Décris ton projet en quelques lignes..." />
+
+## Toast
+
+<div className="rounded border p-3">
+  <p className="font-medium">Projet publié</p>
+  <p className="text-sm text-muted-foreground">
+    La nouvelle étude de cas est en ligne.
+  </p>
+  <div className="mt-2 flex gap-2">
+    <Button size="xs">Voir</Button>
+    <Button size="xs" variant="outline">
+      Fermer
+    </Button>
+  </div>
+</div>
+
+## Toggle
+
+<Button size="xs" variant="outline">
+  Bold
+</Button>
+
+## Toggle Group
+
+<div className="flex gap-1">
+  <Button size="xs" variant="outline">
+    Left
+  </Button>
+  <Button size="xs" variant="outline">
+    Center
+  </Button>
+  <Button size="xs" variant="outline">
+    Right
+  </Button>
+</div>
+
+## Tooltip
+
+<div>
+  <span className="underline decoration-dotted">Survole pour info</span>
+  <p className="text-xs text-muted-foreground">
+    Tooltip: « Dernière mise à jour il y a 2h »
+  </p>
+</div>
+
+## Typography
+
+<h1 className="text-3xl font-bold">Case Study: E-commerce Redesign</h1>
+<h2 className="text-2xl font-semibold">Contexte et objectifs</h2>
+<p className="text-sm leading-6">
+  Le client voulait améliorer la conversion mobile. Nous avons repensé la
+  hiérarchie visuelle, simplifié les CTA et optimisé les performances.
+</p>
