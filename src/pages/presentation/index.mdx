@@ -1,60 +1,54 @@
 ---
 layout: ../../layouts/docs.astro
-title: Presentation
+title: Présentation
 section: presentation
 links:
   - href: /presentation
-    label: Introduction
-  - href: /presentation/shadcn-elements
-    label: Exemples rapides
-  - href: /presentation/shadcn-all
-    label: Catalogue complet
-  - href: /presentation/components
-    label: Components (full list)
+    label: Présentation
+  - href: /presentation/parcours/introduction
+    label: Parcours · Introduction
+  - href: /presentation/parcours/etudes
+    label: Parcours · Études
+  - href: /presentation/parcours/bts-sio
+    label: Parcours · BTS SIO
+  - href: /presentation/parcours/syadem
+    label: Parcours · SYADEM
+  - href: /presentation/realisations/projet1
+    label: Réalisations · Projet 1
+  - href: /presentation/realisations/e5-e6
+    label: Réalisations · E5/E6
+  - href: /presentation/realisations/projet2
+    label: Réalisations · Projet 2
 ---
 
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 # Présentation
 
-Bienvenue dans la section **Presentation**. Le contenu est piloté en **MDX** pour mélanger texte, composants et blocs visuels.
+Cette section regroupe le parcours, les expériences et les réalisations du portfolio.
 
-<Badge>Disponible</Badge>
-
-## Pitch
-
-Je construis des interfaces modernes avec Astro, en séparant le contenu éditorial dans des pages MDX pour garder un portfolio maintenable et agréable à lire.
-
-## Aperçu rapide
-
-<div className="grid gap-4 md:grid-cols-2">
+<div className="mt-4 grid gap-4 md:grid-cols-2">
   <Card>
-    <CardHeader>
-      <CardTitle>Compétences UI</CardTitle>
-      <CardDescription>Design system, composants réutilisables, cohérence visuelle.</CardDescription>
-    </CardHeader>
-    <CardContent>
-      <Button variant="outline">React + Astro</Button>
+    <CardHeader><CardTitle>Parcours</CardTitle><CardDescription>Présentation personnelle, études, compétences et certifications.</CardDescription></CardHeader>
+    <CardContent className="flex flex-wrap gap-2">
+      <Button asChild variant="outline"><a href="/presentation/parcours/introduction">Introduction</a></Button>
+      <Button asChild variant="outline"><a href="/presentation/parcours/etudes">Études</a></Button>
+      <Button asChild variant="outline"><a href="/presentation/parcours/bts-sio">BTS SIO</a></Button>
+      <Button asChild variant="outline"><a href="/presentation/parcours/syadem">SYADEM</a></Button>
+      <Button asChild variant="outline"><a href="/presentation/parcours/travail">Expériences</a></Button>
+      <Button asChild variant="outline"><a href="/presentation/parcours/competences">Compétences</a></Button>
+      <Button asChild variant="outline"><a href="/presentation/parcours/certifications">Certifications</a></Button>
+      <Button asChild variant="outline"><a href="/presentation/parcours/campus-ermitage">Campus Ermitage</a></Button>
     </CardContent>
   </Card>
 
   <Card>
-    <CardHeader>
-      <CardTitle>Méthode</CardTitle>
-      <CardDescription>Documentation continue et pages de démonstration.</CardDescription>
-    </CardHeader>
-    <CardContent>
-      <Button asChild>
-        <a href="/presentation/shadcn-all">Voir le catalogue complet</a>
-      </Button>
+    <CardHeader><CardTitle>Réalisations</CardTitle><CardDescription>Projets techniques et documents d’épreuves professionnelles.</CardDescription></CardHeader>
+    <CardContent className="flex flex-wrap gap-2">
+      <Button asChild><a href="/presentation/realisations/projet1">Projet 1</a></Button>
+      <Button asChild variant="outline"><a href="/presentation/realisations/e5-e6">E5 / E6</a></Button>
+      <Button asChild variant="outline"><a href="/presentation/realisations/projet2">Projet 2</a></Button>
     </CardContent>
   </Card>
 </div>

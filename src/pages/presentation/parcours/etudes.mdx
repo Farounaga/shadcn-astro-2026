@@ -1,145 +1,57 @@
 ---
-title: Parcours d’études
+title: Études
+layout: ../../../layouts/docs.astro
+section: presentation
+links:
+  - href: /presentation
+    label: Présentation
+  - href: /presentation/parcours/introduction
+    label: Parcours · Introduction
+  - href: /presentation/parcours/etudes
+    label: Parcours · Études
+  - href: /presentation/parcours/bts-sio
+    label: Parcours · BTS SIO
+  - href: /presentation/parcours/syadem
+    label: Parcours · SYADEM
+  - href: /presentation/parcours/travail
+    label: Parcours · Expériences
+  - href: /presentation/parcours/certifications
+    label: Parcours · Certifications
+  - href: /presentation/parcours/competences
+    label: Parcours · Compétences
+  - href: /presentation/parcours/campus-ermitage
+    label: Parcours · Campus Ermitage
+  - href: /presentation/realisations/projet1
+    label: Réalisations · Projet 1
+  - href: /presentation/realisations/e5-e6
+    label: Réalisations · E5/E6
+  - href: /presentation/realisations/projet2
+    label: Réalisations · Projet 2
 ---
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-import Heading from '@theme/Heading';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { Icon } from '@iconify/react';
-import Link from '@docusaurus/Link';
+<Alert>
+  <AlertTitle>BTS SIO SLAM</AlertTitle>
+  <AlertDescription>
+    Formation orientée développement d’applications métiers, bases de données, méthodes de projet et sécurité.
+  </AlertDescription>
+</Alert>
 
-:::info
-Cette page présente mon **parcours éducatif**, du **Baccalauréat scientifique**  
-jusqu’à mon **BTS SIO SLAM en alternance** au Campus Ermitage d’Agen.
-:::
-
-## BTS SIO – Option SLAM  
-**Septembre 2024 → Juin 2026**  
-Campus Ermitage, Agen – France
-
-<div className="row">
-
-  <div className="col col--7">
-    <div className="card shadow--md">
-      <div className="card__header" style={{display:'flex',alignItems:'center',gap:'0.5rem'}}>
-        <Icon icon="mdi:laptop" width={20} />
-        <Heading as="h3">Formation</Heading>
-      </div>
-      <div className="card__body">
-        Le <strong>BTS SIO (Services Informatiques aux Organisations)</strong> forme à la création,
-        la maintenance et la sécurisation de solutions informatiques utilisées par les entreprises.
-        L’option <strong>SLAM</strong> est centrée sur le <strong>développement logiciel</strong>,
-        la programmation multilingue et l’intégration des applications métiers.
-      </div>
-    </div>
-  </div>
-
-  <div className="col col--5">
-    <div className="card shadow--md">
-      <div className="card__header" style={{display:'flex',alignItems:'center',gap:'0.5rem'}}>
-        <Icon icon="mdi:map-marker" width={20} />
-        <Heading as="h3">Lieu</Heading>
-      </div>
-      <div className="card__body">
-        Campus Ermitage  
-        156 avenue Jean Jaurès  
-        47000 Agen, France
-      </div>
-    </div>
-  </div>
-
+<div className="mt-4 grid gap-4 md:grid-cols-2">
+  <Card><CardHeader><CardTitle>Formation</CardTitle></CardHeader><CardContent>BTS SIO option SLAM, progression technique et professionnelle sur 2 ans.</CardContent></Card>
+  <Card><CardHeader><CardTitle>Lieu</CardTitle></CardHeader><CardContent>Campus Ermitage, dans un cadre orienté projet et professionnalisation.</CardContent></Card>
 </div>
 
-### Domaines étudiés
+## Matières principales
 
-<Tabs>
+- Programmation : Python, Java, JavaScript, architecture, API
+- Bases de données : conception, SQL, normalisation, performance
+- Solutions logicielles : analyse de besoin, maintenance, documentation
 
-  <TabItem value="prog" label="Programmation">
-    - Bases et avancées multilingues (Python, Java, JS)  
-    - Paradigmes : POO, architecture simple, MVC  
-    - Développement d’applications métiers
-  </TabItem>
+## Compétences construites
 
-  <TabItem value="bdd" label="Bases de données">
-    - Conception : MCD, MLD, schémas  
-    - SQL : requêtes, optimisation, intégrité  
-    - Patrons de données & normalisation
-  </TabItem>
-
-  <TabItem value="logiciel" label="Solutions logicielles">
-    - Création de solutions internes et externes  
-    - Documentation technique & fonctionnelle  
-    - Tests, refactorisation, versioning
-  </TabItem>
-
-</Tabs>
-
----
-
-## BTS Commerce International  
-**Septembre 2016 → Juin 2018**  
-Lycée Commercial Saint Pierre, Brunoy – France
-
-<div className="row">
-
-  <div className="col col--6">
-    <div className="card shadow--md">
-      <div className="card__header" style={{display:'flex',gap:'0.5rem'}}>
-        <Icon icon="mdi:earth" width={20} />
-        <Heading as="h3">Compétences acquises</Heading>
-      </div>
-      <div className="card__body">
-        - Anglais (niveau avancé)  
-        - Espagnol (niveau intermédiaire)  
-        - Communication professionnelle  
-      </div>
-    </div>
-  </div>
-
-  <div className="col col--6">
-    <div className="card shadow--md">
-      <div className="card__header" style={{display:'flex',gap:'0.5rem'}}>
-        <Icon icon="mdi:briefcase" width={20} />
-        <Heading as="h3">Objectifs de la formation</Heading>
-      </div>
-      <div className="card__body">
-        Comprendre les enjeux du commerce international,  
-        de la négociation, et des échanges commerciaux.
-      </div>
-    </div>
-  </div>
-
-</div>
-
----
-
-## Baccalauréat Scientifique – option SVT  
-**Septembre 2015 → Juillet 2016**  
-Lycée Saint François de Sales, Évreux – France
-
-<div className="row">
-
-  <div className="col col--12">
-    <div className="card shadow--md">
-      <div className="card__header" style={{display:'flex',gap:'0.5rem'}}>
-        <Icon icon="mdi:school" width={20} />
-        <Heading as="h3">Formation scientifique</Heading>
-      </div>
-      <div className="card__body">
-        Approche scientifique, rigueur, logique, biologie, SVT et méthodes expérimentales.  
-        Cette base m’a donné un cadre méthodologique solide qui m’aide encore aujourd’hui.
-      </div>
-    </div>
-  </div>
-
-</div>
-
----
-
-## Synthèse du parcours
-
-:::success
-Mon parcours combine **sciences**, **langues**, **commerce**, puis une spécialisation forte en  
-**informatique**, en particulier dans le **développement**, l’architecture logicielle  
-et l’analyse de problèmes métiers.
-:::
+- concevoir et développer des applications
+- structurer des livrables techniques
+- collaborer avec des outils de versioning
+- appliquer des bonnes pratiques de sécurité et de qualité
