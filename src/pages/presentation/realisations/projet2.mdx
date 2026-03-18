@@ -1,18 +1,45 @@
 ---
 title: Projet 2
+layout: ../../../layouts/docs.astro
+section: presentation
+links:
+  - href: /presentation
+    label: Présentation
+  - href: /presentation/parcours/introduction
+    label: Parcours · Introduction
+  - href: /presentation/parcours/etudes
+    label: Parcours · Études
+  - href: /presentation/parcours/bts-sio
+    label: Parcours · BTS SIO
+  - href: /presentation/parcours/syadem
+    label: Parcours · SYADEM
+  - href: /presentation/realisations/projet1
+    label: Réalisations · Projet 1
+  - href: /presentation/realisations/e5-e6
+    label: Réalisations · E5/E6
+  - href: /presentation/realisations/projet2
+    label: Réalisations · Projet 2
 ---
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 # Projet 2 – À définir
 
-Ce projet sert de place réservée pour un autre travail significatif :  
-outil de cybersécurité, application web, script d’automatisation, jeu, etc.
+<Card className="mt-4">
+  <CardHeader><CardTitle>Projet en préparation</CardTitle></CardHeader>
+  <CardContent>
+    Ce projet servira de place réservée pour un autre travail significatif : outil cybersécurité, application web, script d’automatisation, jeu, etc.
 
-Quand le projet sera choisi et assez avancé, cette page présentera :
+    Quand le projet sera choisi et assez avancé, cette page présentera :
 
-- le contexte,
-- les objectifs,
-- les choix techniques,
-- les difficultés rencontrées,
-- et ce que le projet m’a appris.
+    <ul>
+      <li>le contexte</li>
+      <li>les objectifs</li>
+      <li>les choix techniques</li>
+      <li>les difficultés rencontrées</li>
+      <li>ce que le projet m’a appris</li>
+    </ul>
 
-Pour l’instant, cette section est volontairement minimale, mais tres probablement incluera une autre tâche au sein de mon entreprise.
+    <div className="mt-4"><Badge variant="secondary">Brouillon</Badge></div>
+  </CardContent>
+</Card>

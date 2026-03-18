@@ -1,103 +1,51 @@
 ---
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import SiteLayout from "@/layouts/site.astro"
-import { Kbd } from "@/components/ui/kbd"
 
-const highlights = [
-  {
-    title: "Portfolio en MDX",
-    description:
-      "Chaque section est écrite comme une documentation pour pouvoir évoluer facilement.",
-  },
-  {
-    title: "Composants shadcn/ui",
-    description:
-      "Des exemples prêts à copier-coller pour accélérer la création de pages.",
-  },
-  {
-    title: "Veille en publications",
-    description:
-      "Le suivi technologique est présenté comme des mini-news datées.",
-  },
+const quickLinks = [
+  { href: "/presentation/parcours/introduction", label: "Parcours · Introduction" },
+  { href: "/presentation/parcours/etudes", label: "Parcours · Études" },
+  { href: "/presentation/parcours/bts-sio", label: "Parcours · BTS SIO" },
+  { href: "/presentation/parcours/competences", label: "Parcours · Compétences" },
+  { href: "/presentation/realisations/projet1", label: "Réalisation · Projet 1" },
+  { href: "/presentation/realisations/e5-e6", label: "Réalisation · E5/E6" },
+  { href: "/presentation/realisations/projet2", label: "Réalisation · Projet 2" },
 ]
 ---
 
 <SiteLayout title="Portfolio">
-  <section class="space-y-10">
-    <div
-      class="rounded-2xl border bg-gradient-to-b from-muted/70 to-background p-8"
-    >
+  <section class="space-y-8">
+    <div class="rounded-2xl border bg-gradient-to-b from-muted/70 to-background p-6 sm:p-8">
       <div class="space-y-4">
         <Badge variant="outline">Portfolio 2026</Badge>
-        <h1 class="max-w-3xl text-4xl leading-tight font-semibold md:text-5xl">
-          Vladimir Spirine
-        </h1>
-        <p
-          class="max-w-2xl text-sm leading-7 text-muted-foreground md:text-base"
-        >
-          Alternant BTS SIO option SLAM, <br>
-          passionné par les nouvelles technologies et l'automatisation.
+        <h1 class="max-w-3xl text-3xl leading-tight font-semibold sm:text-4xl md:text-5xl">Vladimir Spirine</h1>
+        <p class="max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
+          Alternant BTS SIO option SLAM, passionné par les nouvelles technologies,
+          l’automatisation, la data et les projets utiles en entreprise.
         </p>
         <div class="flex flex-wrap gap-3 pt-2">
-          <Button variant="link">
-            <a href="/presentation">Voir Ma Presentation</a>
-          </Button>
-          <Button variant="link">
-            <a href="/veille">Voir les publications</a>
-          </Button>
+          <Button asChild><a href="/presentation">Voir la présentation</a></Button>
+          <Button asChild variant="outline"><a href="/veille">Voir la veille</a></Button>
         </div>
       </div>
     </div>
 
-    <div class="grid gap-4 md:grid-cols-3">
-      {
-        highlights.map((item) => (
-          <Card>
-            <CardHeader>
-              <CardTitle>{item.title}</CardTitle>
-              <CardDescription>{item.description}</CardDescription>
-            </CardHeader>
-          </Card>
-        ))
-      }
-    </div>
-
-    <div class="grid gap-4 md:grid-cols-2">
-      <Card>
-        <CardHeader>
-          <CardTitle>Presentation</CardTitle>
-          <CardDescription>
-            Pages de profil, démonstrations, composants et contenu long format.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Button asChild>
-            <a href="/presentation">Entrer dans la section</a>
-          </Button>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Veille</CardTitle>
-          <CardDescription>
-            Publications courtes au format news, avec date, thème et résumé.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Button asChild variant="outline">
-            <a href="/veille">Voir les news</a>
-          </Button>
-        </CardContent>
-      </Card>
-    </div>
+    <Card>
+      <CardHeader>
+        <CardTitle>Accès rapide aux nouvelles pages</CardTitle>
+        <CardDescription>Parcours et réalisations détaillés, chaque thème sur sa propre page.</CardDescription>
+      </CardHeader>
+      <CardContent class="flex flex-wrap gap-2">
+        {
+          quickLinks.map((item) => (
+            <Button asChild variant="outline" size="sm">
+              <a href={item.href}>{item.label}</a>
+            </Button>
+          ))
+        }
+      </CardContent>
+    </Card>
   </section>
 </SiteLayout>

@@ -1,60 +1,43 @@
 ---
-title: Dossiers E5 & E6
+title: Réalisations E5 / E6
+layout: ../../../layouts/docs.astro
+section: presentation
+links:
+  - href: /presentation
+    label: Présentation
+  - href: /presentation/parcours/introduction
+    label: Parcours · Introduction
+  - href: /presentation/parcours/etudes
+    label: Parcours · Études
+  - href: /presentation/parcours/bts-sio
+    label: Parcours · BTS SIO
+  - href: /presentation/parcours/syadem
+    label: Parcours · SYADEM
+  - href: /presentation/realisations/projet1
+    label: Réalisations · Projet 1
+  - href: /presentation/realisations/e5-e6
+    label: Réalisations · E5/E6
+  - href: /presentation/realisations/projet2
+    label: Réalisations · Projet 2
 ---
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+# Documents E5 / E6
 
-## Dossiers d'Évaluation — E5 & E6
-
-Voici mes documents officiels pour les épreuves **E5** (Conception / Dév) et **E6** (Support / Exploitation).  
-Chaque fichier peut être consulté directement dans votre navigateur.
-
----
-
-## 📘 E5 — Dossier Professionnel
-
-<Tabs>
-  <TabItem value="pdf" label="Voir PDF">
-    <iframe
-      src="/files/e5.pdf"
-      style={{ width: '100%', height: '700px', border: '1px solid #ccc', borderRadius: '8px' }}
-    />
-  </TabItem>
-
-  <TabItem value="xlsx" label="Voir Excel">
-    <iframe
-      src="https://view.officeapps.live.com/op/embed.aspx?src={window.location.origin + '/files/e5.xlsx'}"
-      style={{ width: '100%', height: '700px', border: '1px solid #ccc', borderRadius: '8px' }}
-    />
-  </TabItem>
-</Tabs>
-
----
-
-## 📙 E6 — Dossier d’Analyse / Support
-
-<Tabs>
-  <TabItem value="pdf" label="Voir PDF">
-    <iframe
-      src="/files/e6.pdf"
-      style={{ width: '100%', height: '700px', border: '1px solid #ccc', borderRadius: '8px' }}
-    />
-  </TabItem>
-
-  <TabItem value="xlsx" label="Voir Excel">
-    <iframe
-      src="https://view.officeapps.live.com/op/embed.aspx?src={window.location.origin + '/files/e6.xlsx'}"
-      style={{ width: '100%', height: '700px', border: '1px solid #ccc', borderRadius: '8px' }}
-    />
-  </TabItem>
-</Tabs>
-
----
-
-## 📂 Téléchargements directs
-
-- **E5 PDF** : [Télécharger](/files/e5.pdf)  
-- **E5 Excel** : [Télécharger](/files/e5.xlsx)  
-- **E6 PDF** : [Télécharger](/files/e6.pdf)  
-- **E6 Excel** : [Télécharger](/files/e6.xlsx)
+<div className="mt-4 grid gap-4 md:grid-cols-2">
+  <Card>
+    <CardHeader><CardTitle>E5</CardTitle></CardHeader>
+    <CardContent className="flex flex-wrap gap-2">
+      <Button asChild><a href="/files/e5.pdf" target="_blank">Voir PDF</a></Button>
+      <Button asChild variant="outline"><a href="/files/e5.xlsx" target="_blank">Voir Excel</a></Button>
+    </CardContent>
+  </Card>
+  <Card>
+    <CardHeader><CardTitle>E6</CardTitle></CardHeader>
+    <CardContent className="flex flex-wrap gap-2">
+      <Button asChild><a href="/files/e6.pdf" target="_blank">Voir PDF</a></Button>
+      <Button asChild variant="outline"><a href="/files/e6.xlsx" target="_blank">Voir Excel</a></Button>
+    </CardContent>
+  </Card>
+</div>

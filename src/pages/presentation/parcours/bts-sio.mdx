@@ -1,212 +1,91 @@
 ---
 title: Présentation de la formation
+layout: ../../../layouts/docs.astro
+section: presentation
+links:
+  - href: /presentation
+    label: Présentation
+  - href: /presentation/parcours/introduction
+    label: Parcours · Introduction
+  - href: /presentation/parcours/etudes
+    label: Parcours · Études
+  - href: /presentation/parcours/bts-sio
+    label: Parcours · BTS SIO
+  - href: /presentation/parcours/syadem
+    label: Parcours · SYADEM
+  - href: /presentation/parcours/travail
+    label: Parcours · Expériences
+  - href: /presentation/parcours/certifications
+    label: Parcours · Certifications
+  - href: /presentation/parcours/competences
+    label: Parcours · Compétences
+  - href: /presentation/parcours/campus-ermitage
+    label: Parcours · Campus Ermitage
+  - href: /presentation/realisations/projet1
+    label: Réalisations · Projet 1
+  - href: /presentation/realisations/e5-e6
+    label: Réalisations · E5/E6
+  - href: /presentation/realisations/projet2
+    label: Réalisations · Projet 2
 ---
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-
-:::info
-**BTS SIO – SLAM** est une formation professionnalisante en **développement**,  
-**systèmes d'information**, **analyse métier** et **cybersécurité**, orientée vers  
-la création d'applications métiers utilisées dans les organisations.
-:::
+<Alert>
+  <AlertTitle>BTS SIO – SLAM</AlertTitle>
+  <AlertDescription>
+    Formation professionnalisante en développement, systèmes d’information, analyse métier et cybersécurité.
+  </AlertDescription>
+</Alert>
 
 ## Qu’est-ce que le BTS SIO ?
 
-<div className="row">
-
-  <div className="col col--6">
-    <div className="card shadow--md">
-      <div className="card__header">
-        <Heading as="h3" style={{display:'flex',alignItems:'center',gap:'0.5rem'}}>
-          <Icon icon="mdi:domain" width="20" /> Services Informatiques aux Organisations
-        </Heading>
-      </div>
-      <div className="card__body">
-        Le BTS SIO forme des techniciens capables d’analyser, concevoir, développer,  
-        sécuriser et maintenir des solutions informatiques utilisées dans les entreprises,  
-        institutions ou ESN.
-      </div>
-    </div>
-  </div>
-
-  <div className="col col--6">
-    <div className="card shadow--md">
-      <div className="card__header">
-        <Heading as="h3" style={{display:'flex',alignItems:'center',gap:'0.5rem'}}>
-          <Icon icon="mdi:code-braces" width="20" /> Option SLAM
-        </Heading>
-      </div>
-      <div className="card__body">
-        L’option **SLAM (Solutions Logicielles et Applications Métiers)** est dédiée  
-        au **développement logiciel**, à l’architecture, aux bases de données  
-        et à l’intégration métier.
-      </div>
-    </div>
-  </div>
-
+<div className="mt-4 grid gap-4 md:grid-cols-2">
+  <Card>
+    <CardHeader><CardTitle>Services Informatiques aux Organisations</CardTitle></CardHeader>
+    <CardContent>
+      Le BTS SIO forme des techniciens capables d’analyser, concevoir, développer, sécuriser et maintenir des solutions informatiques utilisées dans les entreprises, institutions ou ESN.
+    </CardContent>
+  </Card>
+  <Card>
+    <CardHeader><CardTitle>Option SLAM</CardTitle></CardHeader>
+    <CardContent>
+      L’option SLAM (Solutions Logicielles et Applications Métiers) est dédiée au développement logiciel, à l’architecture, aux bases de données et à l’intégration métier.
+    </CardContent>
+  </Card>
 </div>
-
----
 
 ## Objectifs de la formation
 
-:::tip
-Compétences centralisées autour de **dev**, **modélisation**, **sécurité**, **analyse métier** et **livrables professionnels**.
-:::
+<div className="mt-3 flex flex-wrap gap-2">
+  <Badge>Développement</Badge>
+  <Badge variant="secondary">Modélisation</Badge>
+  <Badge variant="secondary">Sécurité</Badge>
+  <Badge variant="outline">Analyse métier</Badge>
+  <Badge variant="outline">Livrables professionnels</Badge>
+</div>
 
-- Comprendre et formaliser un besoin (UML, MCD, user stories)  
-- Concevoir architectures (MVC, n-tiers), modèles de données et API  
-- Développer, tester, documenter et maintenir des applications  
-- Intégrer sécurité (auth, permissions, RGPD, pratiques OWASP)  
-- Automatiser (scripts), utiliser Git, CI/CD simplifiée  
-- Gérer documentation technique et utilisateur  
-
----
+- Comprendre et formaliser un besoin (UML, MCD, user stories)
+- Concevoir des architectures (MVC, n-tiers), modèles de données et API
+- Développer, tester, documenter et maintenir des applications
+- Intégrer la sécurité (auth, permissions, RGPD, pratiques OWASP)
+- Automatiser avec des scripts, Git et CI/CD simplifiée
+- Gérer une documentation technique et utilisateur
 
 ## Contenu pédagogique (structuré)
 
-<Tabs>
-  <TabItem value="dev" label="Développement">
-    - Python (scripts, API)
-    - Java (POO, Swing, intro Spring)
-    - JavaScript (Node, front moderne)
-    - SQL (requêtes, optimisation)
-    - Architecture (MVC, REST)
-  </TabItem>
-
-  <TabItem value="bdd" label="Bases de données">
-    - MCD/MLD, normalisation  
-    - Conception d’une base cohérente  
-    - Transactions, index, intégrité  
-  </TabItem>
-
-  <TabItem value="secu" label="Sécurité / RGPD">
-    - Authentification / rôles  
-    - Données sensibles & conformité RGPD  
-    - Vulnérabilités OWASP niveau débutant  
-  </TabItem>
-
-  <TabItem value="projet" label="Gestion de projet">
-    - Agile simplifiée, backlog, sprints  
-    - Documentation & schémas  
-    - Outils collaboratifs (GitHub, Kanban)  
-  </TabItem>
-</Tabs>
-
----
-
-## Compétences développées
-
-<div className="row">
-
-  <div className="col col--4">
-    <div className="card">
-      <div className="card__header" style={{display:'flex',gap:'0.5rem'}}>
-        <Icon icon="mdi:account-search" width="20" />
-        <Heading as="h3">Analyse métier</Heading>
-      </div>
-      <div className="card__body">
-        Reformuler un besoin, rédiger des user stories, modéliser un SI.
-      </div>
-    </div>
-  </div>
-
-  <div className="col col--4">
-    <div className="card">
-      <div className="card__header" style={{display:'flex',gap:'0.5rem'}}>
-        <Icon icon="mdi:database-cog" width="20" />
-        <Heading as="h3">Conception & BDD</Heading>
-      </div>
-      <div className="card__body">
-        Modèles UML, SQL avancé, cohérence et performance d’une base.
-      </div>
-    </div>
-  </div>
-
-  <div className="col col--4">
-    <div className="card">
-      <div className="card__header" style={{display:'flex',gap:'0.5rem'}}>
-        <Icon icon="mdi:shield-check" width="20" />
-        <Heading as="h3">Qualité & Sécurité</Heading>
-      </div>
-      <div className="card__body">
-        Code propre, tests, revue de code, sécurité élémentaire.
-      </div>
-    </div>
-  </div>
-
+<div className="mt-4 grid gap-4 md:grid-cols-2">
+  <Card><CardHeader><CardTitle>Développement</CardTitle></CardHeader><CardContent>Python (scripts, API), Java (POO), JavaScript (Node/front), SQL, architecture MVC/REST.</CardContent></Card>
+  <Card><CardHeader><CardTitle>Bases de données</CardTitle></CardHeader><CardContent>MCD/MLD, normalisation, transactions, index, intégrité.</CardContent></Card>
+  <Card><CardHeader><CardTitle>Sécurité / RGPD</CardTitle></CardHeader><CardContent>Authentification, rôles, données sensibles, conformité RGPD, OWASP débutant.</CardContent></Card>
+  <Card><CardHeader><CardTitle>Gestion de projet</CardTitle></CardHeader><CardContent>Agile simplifiée, backlog, sprints, documentation et outils collaboratifs.</CardContent></Card>
 </div>
-
----
 
 ## Débouchés possibles
 
-:::note
-SLAM ouvre directement vers les métiers du développement et de l’intégration applicative.
-:::
-
-- Développeur backend / full-stack junior  
-- Analyste développeur  
-- Intégrateur de solutions métiers  
-- Support applicatif évolutif  
-- Poursuite d’études : Licence Pro, Bachelor, BUT, écoles d’ingénieur  
-
----
-
-## Outils & technologies rencontrés
-
-- Git / GitHub  
-- VS Code, IntelliJ  
-- PostgreSQL / MySQL  
-- JUnit, PyTest, Postman  
-- Markdown (documentation), Docusaurus
-
----
-
-## Méthodes de travail
-
-:::info
-La formation adopte une logique **projet**, proche du fonctionnement en entreprise.
-:::
-
-- Mini-sprints & livrables  
-- Pair-programming / revues de code  
-- Jeux de données de test  
-- Journal de bord et suivi d’avancement  
-
----
-
-## Exemples de projets réalisés
-
-<Tabs>
-  <TabItem value="crud" label="Application CRUD">
-    Application métier (stock, planning, gestion interne)  
-    avec base SQL, GUI ou API REST.
-  </TabItem>
-  <TabItem value="api" label="API REST">
-    Conception, documentation, gestion des erreurs, tests Postman.
-  </TabItem>
-  <TabItem value="script" label="Automatisation">
-    Scripts d’import/export, transformations, traitement de données.
-  </TabItem>
-  <TabItem value="secu" label="Module sécurité">
-    Authentification simple, rôles, permissions.
-  </TabItem>
-</Tabs>
-
----
-
-## Valeur ajoutée de la formation
-
-- Capacité à mener une application simple **de A à Z**  
-- Sensibilisation aux enjeux de sécurité  
-- Autonomie sur la maintenance et l’évolution d’un existant  
-- Communication claire via schémas et documentation  
-
----
-
-## En résumé
-
-:::success
-Une formation **technique, concrète et professionnalisante**, orientée **développement structuré**,  
-compréhension du métier utilisateur et **préparation à l'emploi ou à la poursuite d’études**.
-:::
+- Développeur backend / full-stack junior
+- Analyste développeur
+- Intégrateur de solutions métiers
+- Support applicatif évolutif
+- Poursuite d’études : Licence Pro, Bachelor, BUT, écoles d’ingénieur
