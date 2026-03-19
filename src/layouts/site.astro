@@ -10,18 +10,16 @@ const { title } = Astro.props
 const pathname = Astro.url.pathname
 
 const menuItems = [
-  { href: "/", label: "Accueil" },
   { href: "/presentation", label: "Présentation" },
-  { href: "/presentation/parcours/introduction", label: "Parcours" },
-  { href: "/presentation/realisations/projet1", label: "Réalisations" },
   { href: "/veille", label: "Veille" },
+  { href: "/contact", label: "Contact & Informations" },
 ]
 ---
 
 <Layout title={title}>
   <header class="sticky top-0 z-20 border-b bg-background/90 backdrop-blur">
     <div class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-      <a href="/" class="text-sm font-semibold tracking-wide">Portfolio MDX</a>
+      <a href="/" class="text-sm font-semibold tracking-wide">VS</a>
       <nav class="flex flex-wrap items-center gap-2">
         {
           menuItems.map((item) => (

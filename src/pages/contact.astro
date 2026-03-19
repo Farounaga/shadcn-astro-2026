@@ -1,0 +1,111 @@
+---
+import SiteLayout from "@/layouts/site.astro"
+import { Button } from "@/components/ui/button"
+---
+
+<SiteLayout title="Contact & Infos">
+  <section class="mx-auto max-w-3xl space-y-8">
+    
+    <div class="space-y-4">
+      <h1 class="text-3xl font-semibold">Contact & Informations</h1>
+      <p class="text-muted-foreground">
+        Contactez-moi pour toute opportunité, collaboration ou question.
+      </p>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2">
+      
+      <div class="rounded-xl border p-5 space-y-3">
+        <h2 class="text-lg font-medium">Contact</h2>
+
+        <div class="text-sm space-y-1 text-muted-foreground">
+          <p>Email : vspirine@free.fr</p>
+          <p>Téléphone : 06 51 03 77 06</p>
+          <p>Localisation : Agen, France</p>
+        </div>
+
+        <div class="pt-2 flex gap-2">
+          <Button asChild>
+            <a href="mailto:vspirine@free.fr">Envoyer un email</a>
+          </Button>
+        </div>
+      </div>
+
+      <div class="rounded-xl border p-5 space-y-3">
+        <h2 class="text-lg font-medium">Informations</h2>
+
+        <div class="text-sm space-y-1 text-muted-foreground">
+          <p>Nom : Vladimir Spirine</p>
+          <p>Formation : BTS SIO (SLAM)</p>
+          <p>Statut : Alternant</p>
+          <p>Domaine : Développement / Data / IA</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="rounded-xl border p-5 space-y-3">
+      <h2 class="text-lg font-medium">Réseaux</h2>
+
+      <div class="flex flex-wrap gap-3">
+        <Button asChild variant="outline">
+          <a href="https://github.com/Farounaga" target="_blank">GitHub</a>
+        </Button>
+
+        <Button asChild variant="outline">
+          <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        </Button>
+      </div>
+    </div>
+
+    <div class="rounded-xl border p-5 space-y-4">
+      <h2 class="text-lg font-medium">Formulaire</h2>
+
+      <form class="space-y-3" onsubmit="sendMail(event)">
+        <input
+          id="name"
+          type="text"
+          placeholder="Votre nom"
+          required
+          class="w-full rounded-md border px-3 py-2 text-sm"
+        />
+
+        <input
+          id="email"
+          type="email"
+          placeholder="Votre email"
+          required
+          class="w-full rounded-md border px-3 py-2 text-sm"
+        />
+
+        <textarea
+          id="message"
+          placeholder="Votre message"
+          rows="4"
+          required
+          class="w-full rounded-md border px-3 py-2 text-sm"
+        ></textarea>
+
+        <Button type="submit">Envoyer</Button>
+      </form>
+    </div>
+
+  </section>
+
+  <script>
+    function sendMail(e) {
+      e.preventDefault()
+
+      const name = document.getElementById("name").value
+      const email = document.getElementById("email").value
+      const message = document.getElementById("message").value
+
+      const subject = encodeURIComponent("Contact depuis portfolio")
+      const body = encodeURIComponent(
+        `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+      )
+
+      window.location.href = `mailto:vspirine@free.fr?subject=${subject}&body=${body}`
+    }
+  </script>
+</SiteLayout>

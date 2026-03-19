@@ -3,22 +3,35 @@ layout: ../../layouts/docs.astro
 title: Présentation
 section: presentation
 links:
-  - href: /presentation
-    label: Présentation
-  - href: /presentation/parcours/introduction
-    label: Parcours · Introduction
-  - href: /presentation/parcours/etudes
-    label: Parcours · Études
-  - href: /presentation/parcours/bts-sio
-    label: Parcours · BTS SIO
-  - href: /presentation/parcours/syadem
-    label: Parcours · SYADEM
-  - href: /presentation/realisations/projet1
-    label: Réalisations · Projet 1
-  - href: /presentation/realisations/e5-e6
-    label: Réalisations · E5/E6
-  - href: /presentation/realisations/projet2
-    label: Réalisations · Projet 2
+
+  - href: /presentation/bts-sio
+    label: BTS SIO
+  - href: /presentation/campus-ermitage
+    label: Campus Ermitage
+  - href: /presentation/syadem
+    label: Entreprise SYADEM
+
+  - label: Parcours
+
+  - href: /presentation/etudes
+    label: Parcours d'études
+  - href: /presentation/travail
+    label: Parcours professionnel
+
+  - label: Compétences
+  - href: /presentation/competences
+    label: Compétences techniques
+  - href: /presentation/certifications
+    label: Certifications
+
+  - label: Réalisations
+
+  - href: /presentation/projet1
+    label: Projet 1
+  - href: /presentation/projet2
+    label: Projet 2
+  - href: /presentation/e5-e6
+    label: E5 / E6
 ---
 
 import { Button } from "@/components/ui/button"
@@ -30,21 +43,21 @@ Cette section regroupe le parcours, les expériences et les réalisations du por
 
 <div className="mt-4 grid gap-4 md:grid-cols-2">
   <Card>
-    <CardHeader><CardTitle>Parcours</CardTitle><CardDescription>Présentation personnelle, études, compétences et certifications.</CardDescription></CardHeader>
+    <CardHeader><CardTitle>Moi</CardTitle><CardDescription>Présentation personnelle, études, travail, compétences et certifications.</CardDescription></CardHeader>
     <CardContent className="flex flex-wrap gap-2">
-      <Button asChild variant="outline"><a href="/presentation/parcours/introduction">Introduction</a></Button>
-      <Button asChild variant="outline"><a href="/presentation/parcours/etudes">Études</a></Button>
-      <Button asChild variant="outline"><a href="/presentation/parcours/bts-sio">BTS SIO</a></Button>
-      <Button asChild variant="outline"><a href="/presentation/parcours/syadem">SYADEM</a></Button>
-      <Button asChild variant="outline"><a href="/presentation/parcours/travail">Expériences</a></Button>
-      <Button asChild variant="outline"><a href="/presentation/parcours/competences">Compétences</a></Button>
-      <Button asChild variant="outline"><a href="/presentation/parcours/certifications">Certifications</a></Button>
-      <Button asChild variant="outline"><a href="/presentation/parcours/campus-ermitage">Campus Ermitage</a></Button>
+      <Button  variant="link"><a href="/presentation/parcours/introduction">Introduction</a></Button>
+      <Button  variant="link"><a href="/presentation/parcours/etudes">Études</a></Button>
+      <Button  variant="link"><a href="/presentation/parcours/bts-sio">BTS SIO</a></Button>
+      <Button  variant="link"><a href="/presentation/parcours/syadem">SYADEM</a></Button>
+      <Button  variant="link"><a href="/presentation/parcours/travail">Expériences</a></Button>
+      <Button  variant="link"><a href="/presentation/parcours/competences">Compétences</a></Button>
+      <Button  variant="link"><a href="/presentation/parcours/certifications">Certifications</a></Button>
+      <Button  variant="link"><a href="/presentation/parcours/campus-ermitage">Campus Ermitage</a></Button>
     </CardContent>
   </Card>
 
   <Card>
-    <CardHeader><CardTitle>Réalisations</CardTitle><CardDescription>Projets techniques et documents d’épreuves professionnelles.</CardDescription></CardHeader>
+    <CardHeader><CardTitle>Mes Réalisations</CardTitle><CardDescription>Projets techniques et documents d’épreuves professionnelles.</CardDescription></CardHeader>
     <CardContent className="flex flex-wrap gap-2">
       <Button asChild><a href="/presentation/realisations/projet1">Projet 1</a></Button>
       <Button asChild variant="outline"><a href="/presentation/realisations/e5-e6">E5 / E6</a></Button>

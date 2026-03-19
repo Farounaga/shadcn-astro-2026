@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import SiteLayout from "@/layouts/site.astro"
 
-const quickLinks = [
-  { href: "/presentation/parcours/introduction", label: "Parcours · Introduction" },
-  { href: "/presentation/parcours/etudes", label: "Parcours · Études" },
-  { href: "/presentation/parcours/bts-sio", label: "Parcours · BTS SIO" },
-  { href: "/presentation/parcours/competences", label: "Parcours · Compétences" },
-  { href: "/presentation/realisations/projet1", label: "Réalisation · Projet 1" },
-  { href: "/presentation/realisations/e5-e6", label: "Réalisation · E5/E6" },
-  { href: "/presentation/realisations/projet2", label: "Réalisation · Projet 2" },
+const PresentationLinks = [
+  { href: "/presentation/parcours/introduction", label: "Introduction" },
+  { href: "/presentation/parcours/etudes", label: "Études" },
+  { href: "/presentation/parcours/bts-sio", label: "BTS SIO" },
+  { href: "/presentation/parcours/competences", label: "Compétences" },
+  { href: "/presentation/realisations/e5-e6", label: "E5/E6" },
+  { href: "/presentation/realisations/projet1", label: "Projet 1" },
+  { href: "/presentation/realisations/projet2", label: "Projet 2" },
 ]
 ---
 
@@ -23,23 +23,26 @@ const quickLinks = [
         <h1 class="max-w-3xl text-3xl leading-tight font-semibold sm:text-4xl md:text-5xl">Vladimir Spirine</h1>
         <p class="max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
           Alternant BTS SIO option SLAM, passionné par les nouvelles technologies,
-          l’automatisation, la data et les projets utiles en entreprise.
+          l’automatisation, la data et la cybersécurité.
         </p>
         <div class="flex flex-wrap gap-3 pt-2">
-          <Button asChild><a href="/presentation">Voir la présentation</a></Button>
-          <Button asChild variant="outline"><a href="/veille">Voir la veille</a></Button>
+          <Button asChild><a href="/presentation">Voir ma présentation</a></Button>
+          <Button asChild variant="outline"><a href="/veille">Voir ma veille</a></Button>
         </div>
       </div>
     </div>
 
-    <Card>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <Card >
       <CardHeader>
         <CardTitle>Accès rapide aux nouvelles pages</CardTitle>
-        <CardDescription>Parcours et réalisations détaillés, chaque thème sur sa propre page.</CardDescription>
+        <CardDescription>
+          Parcours et réalisations détaillés, chaque thème sur sa propre page.
+        </CardDescription>
       </CardHeader>
-      <CardContent class="flex flex-wrap gap-2">
+      <CardContent >
         {
-          quickLinks.map((item) => (
+          PresentationLinks.map((item) => (
             <Button asChild variant="outline" size="sm">
               <a href={item.href}>{item.label}</a>
             </Button>
@@ -47,5 +50,24 @@ const quickLinks = [
         }
       </CardContent>
     </Card>
+
+    <Card >
+      <CardHeader>
+        <CardTitle>Accès rapide aux nouvelles pages</CardTitle>
+        <CardDescription>
+          Parcours et réalisations détaillés, chaque thème sur sa propre page.
+        </CardDescription>
+      </CardHeader>
+      <CardContent >
+        {
+          PresentationLinks.map((item) => (
+            <Button asChild variant="outline" size="sm">
+              <a href={item.href}>{item.label}</a>
+            </Button>
+          ))
+        }
+      </CardContent>
+    </Card>
+  </div>
   </section>
 </SiteLayout>

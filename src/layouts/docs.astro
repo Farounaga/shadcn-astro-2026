@@ -2,7 +2,7 @@
 import SiteLayout from "@/layouts/site.astro"
 
 interface LinkItem {
-  href: string
+  href?: string
   label: string
 }
 
@@ -22,31 +22,33 @@ const pathname = Astro.url.pathname
 <SiteLayout title={title}>
   <div class="grid gap-8 md:grid-cols-[220px_minmax(0,1fr)]">
     <aside class="md:sticky md:top-24 md:h-fit">
-      <p
-        class="mb-3 text-xs font-semibold tracking-[0.12em] text-muted-foreground uppercase"
-      >
+      <p class="mb-3 text-xs font-semibold tracking-[0.12em] text-muted-foreground uppercase">
         {section}
       </p>
-      <ul class="space-y-1">
-        {
-          links.map((link) => (
-            <li>
-              <a
-                href={link.href}
-                class:list={[
-                  "block rounded-md px-3 py-2 text-sm transition-colors",
-                  pathname === link.href
-                    ? "bg-muted font-medium text-foreground"
-                    : "text-muted-foreground hover:bg-muted hover:text-foreground",
-                ]}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+
+      {
+        links.map((link) =>
+          link.href ? (
+            <a
+              href={link.href}
+              class:list={[
+                "block rounded-md px-3 py-2 text-sm transition-colors",
+                pathname === link.href
+                  ? "bg-muted font-medium text-foreground"
+                  : "text-muted-foreground hover:bg-muted hover:text-foreground",
+              ]}
+            >
+              {link.label}
+            </a>
+          ) : (
+            <p class="mt-4 mb-3 text-xs font-semibold tracking-[0.12em] text-muted-foreground uppercase">
+              {link.label}
+            </p>
+          )
+        )
+      }
     </aside>
+
     <article class="doc-content">
       <slot />
     </article>
