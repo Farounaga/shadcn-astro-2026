@@ -1,6 +1,6 @@
 ---
 title: Présentation de la formation
-layout: ../../../layouts/docs.astro
+layout: ../../layouts/docs.astro
 section: presentation
 links:
 
@@ -36,6 +36,7 @@ links:
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 <Alert>
   <AlertTitle>BTS SIO – SLAM</AlertTitle>
@@ -61,6 +62,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
   </Card>
 </div>
 
+<Separator className="my-6" />
+
 ## Objectifs de la formation
 
 <div className="mt-3 flex flex-wrap gap-2">
@@ -71,12 +74,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
   <Badge variant="outline">Livrables professionnels</Badge>
 </div>
 
-- Comprendre et formaliser un besoin (UML, MCD, user stories)
-- Concevoir des architectures (MVC, n-tiers), modèles de données et API
-- Développer, tester, documenter et maintenir des applications
-- Intégrer la sécurité (auth, permissions, RGPD, pratiques OWASP)
-- Automatiser avec des scripts, Git et CI/CD simplifiée
-- Gérer une documentation technique et utilisateur
+<Card className="mt-4">
+  <CardHeader><CardTitle>Objectifs de la formation</CardTitle></CardHeader>
+  <CardContent>
+    <ul className="list-disc space-y-2 pl-6">
+      <li>Comprendre et formaliser un besoin (UML, MCD, user stories)</li>
+      <li>Concevoir des architectures (MVC, n-tiers), modèles de données et API</li>
+      <li>Développer, tester, documenter et maintenir des applications</li>
+      <li>Intégrer la sécurité (auth, permissions, RGPD, pratiques OWASP)</li>
+      <li>Automatiser avec des scripts, Git et CI/CD simplifiée</li>
+      <li>Gérer une documentation technique et utilisateur</li>
+    </ul>
+  </CardContent>
+</Card>
+
+<Separator className="my-6" />
 
 ## Contenu pédagogique (structuré)
 
@@ -87,10 +99,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
   <Card><CardHeader><CardTitle>Gestion de projet</CardTitle></CardHeader><CardContent>Agile simplifiée, backlog, sprints, documentation et outils collaboratifs.</CardContent></Card>
 </div>
 
+<Separator className="my-6" />
+
 ## Débouchés possibles
 
-- Développeur backend / full-stack junior
-- Analyste développeur
-- Intégrateur de solutions métiers
-- Support applicatif évolutif
-- Poursuite d’études : Licence Pro, Bachelor, BUT, écoles d’ingénieur
+<Card className="mt-4">
+  <CardHeader><CardTitle>Débouchés possibles</CardTitle></CardHeader>
+  <CardContent>
+    <ul className="list-disc space-y-2 pl-6">
+      <li>Développeur backend / full-stack junior</li>
+      <li>Analyste développeur</li>
+      <li>Intégrateur de solutions métiers</li>
+      <li>Support applicatif évolutif</li>
+      <li>Poursuite d’études : Licence Pro, Bachelor, BUT, écoles d’ingénieur</li>
+    </ul>
+  </CardContent>
+</Card>

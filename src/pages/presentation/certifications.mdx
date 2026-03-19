@@ -1,6 +1,6 @@
 ---
 title: Certifications
-layout: ../../../layouts/docs.astro
+layout: ../../layouts/docs.astro
 section: presentation
 links:
 
@@ -34,16 +34,52 @@ links:
     label: E5 / E6
 ---
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 # Certifications Cisco
 
 <div className="mt-4 grid gap-4 md:grid-cols-3">
-  <Card><CardHeader><CardTitle>Introduction to Networks</CardTitle></CardHeader><CardContent><Badge>Validée</Badge></CardContent></Card>
-  <Card><CardHeader><CardTitle>Switching, Routing & Wireless</CardTitle></CardHeader><CardContent><Badge>Validée</Badge></CardContent></Card>
-  <Card><CardHeader><CardTitle>Enterprise Networking</CardTitle></CardHeader><CardContent><Badge variant="secondary">En progression</Badge></CardContent></Card>
+  <Card>
+    <CardHeader><CardTitle>Introduction to Networks</CardTitle></CardHeader>
+    <CardContent className="space-y-4">
+      <img src="https://img.shields.io/badge/Cisco-Introduction_to_Networks-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Introduction to Networks" />
+      <Badge>Validée</Badge>
+      <Button asChild variant="outline">
+        <a href="https://www.netacad.com/courses/networking/ccna-introduction-networks" target="_blank" rel="noreferrer">Voir la référence</a>
+      </Button>
+    </CardContent>
+  </Card>
+  <Card>
+    <CardHeader><CardTitle>Switching, Routing & Wireless</CardTitle></CardHeader>
+    <CardContent className="space-y-4">
+      <img src="https://img.shields.io/badge/Cisco-Switching%2C_Routing_%26_Wireless-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Switching, Routing & Wireless" />
+      <Badge>Validée</Badge>
+      <Button asChild variant="outline">
+        <a href="https://www.netacad.com/courses/networking/ccna-switching-routing-wireless-essentials" target="_blank" rel="noreferrer">Voir la référence</a>
+      </Button>
+    </CardContent>
+  </Card>
+  <Card>
+    <CardHeader><CardTitle>Enterprise Networking</CardTitle></CardHeader>
+    <CardContent className="space-y-4">
+      <img src="https://img.shields.io/badge/Cisco-Enterprise_Networking-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Enterprise Networking" />
+      <Badge variant="secondary">En progression</Badge>
+      <Button asChild variant="outline">
+        <a href="https://www.netacad.com/courses/networking/ccna-enterprise-networking-security-automation" target="_blank" rel="noreferrer">Voir la référence</a>
+      </Button>
+    </CardContent>
+  </Card>
 </div>
 
 ## Objectif certifications
 
-Valider des compétences réseau/sécurité complémentaires au parcours SLAM pour mieux comprendre l’écosystème applicatif global.
+<Separator className="my-6" />
+
+<Card className="mt-4">
+  <CardHeader><CardTitle>Objectif certifications</CardTitle></CardHeader>
+  <CardContent>
+    Valider des compétences réseau/sécurité complémentaires au parcours SLAM pour mieux comprendre l’écosystème applicatif global.
+  </CardContent>
+</Card>
