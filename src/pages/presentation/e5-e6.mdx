@@ -1,0 +1,80 @@
+---
+title: E5 / E6
+layout: ../../layouts/docs.astro
+section: presentation
+links:
+
+  - href: /presentation/bts-sio
+    label: BTS SIO
+  - href: /presentation/campus-ermitage
+    label: Campus Ermitage
+  - href: /presentation/syadem
+    label: Entreprise SYADEM
+
+  - label: Parcours
+
+  - href: /presentation/etudes
+    label: Parcours d'études
+  - href: /presentation/travail
+    label: Parcours professionnel
+
+  - label: Compétences
+  - href: /presentation/competences
+    label: Compétences techniques
+  - href: /presentation/certifications
+    label: Certifications
+
+  - label: Réalisations
+
+  - href: /presentation/projet1
+    label: Projet 1
+  - href: /presentation/projet2
+    label: Projet 2
+  - href: /presentation/e5-e6
+    label: E5 / E6
+---
+
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+
+# E5 / E6
+
+<Alert className="mt-4">
+  <AlertTitle>Épreuves professionnelles</AlertTitle>
+  <AlertDescription>
+    Cette page centralise les documents et éléments de preuve liés aux épreuves E5 / E6.
+  </AlertDescription>
+</Alert>
+
+<Separator className="my-6" />
+
+<div className="grid gap-4 md:grid-cols-2">
+  <Card>
+    <CardHeader>
+      <CardTitle>E5</CardTitle>
+      <CardDescription>Support, mise en production, et valorisation des compétences techniques.</CardDescription>
+    </CardHeader>
+    <CardContent className="space-y-3">
+      <Badge variant="outline">Dossier</Badge>
+      <div>
+        <Button asChild variant="outline"><a href="/presentation/projet1">Voir un projet lié</a></Button>
+      </div>
+    </CardContent>
+  </Card>
+
+  <Card>
+    <CardHeader>
+      <CardTitle>E6</CardTitle>
+      <CardDescription>Conception, développement et présentation de réalisations professionnelles.</CardDescription>
+    </CardHeader>
+    <CardContent className="space-y-3">
+      <Badge variant="outline">Présentation</Badge>
+      <div>
+        <Button asChild variant="outline"><a href="/presentation/projet2">Voir un projet lié</a></Button>
+      </div>
+    </CardContent>
+  </Card>
+</div>
